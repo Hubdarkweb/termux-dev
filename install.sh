@@ -37,7 +37,7 @@ yes|pkg update && yes|pkg upgrade
 
 # INSTALANDO PAQUETES
 
-yes|pkg install git gh zsh neovim nodejs python php curl wget lua-language-server lsd bat tur-repo proot ncurses-utils ripgrep libtreesitter stylua tmate cloudflared translate-shell termimage html2text jq
+yes|pkg install git gh zsh neovim nodejs python php curl wget lua-language-server lsd bat tur-repo proot ncurses-utils ripgrep stylua tmate cloudflared translate-shell termimage html2text jq
 
 # INSTALANDO PAQUETES DE TERMUX USERS REPO (tur)
 
@@ -77,13 +77,21 @@ else
 fi
 
 # DESCARGANDO NVCHAD
-#
+
 rm -rf ~/.config/nvim
+rm -rf ~/.local/state/nvim
 rm -rf ~/.local/share/nvim
 
 mkdir -p ~/.config
 
-git clone https://github.com/TermuxDev/termux-dev-repo.git ~/configNvChad && cp -r ~/configNvChad/install/nvchad/nvim ~/.config/nvim && rm -rf ~/configNvChad
+git clone https://github.com/NvChad/starter ~/.config/nvim
+
+rm ~/.config/nvim/lua/plugins/init.lua
+rm ~/.config/nvim/lua/configs/lspconfig.lua
+
+wget https://raw.githubusercontent.com/TermuxDev/termux-dev-repo/main/install/nvchad/nvim/lua/plugins/init.lua -O ~/.config/nvim/lua/plugins/init.lua
+
+wget https://raw.githubusercontent.com/TermuxDev/termux-dev-repo/main/install/nvchad/nvim/lua/configs/lspconfig.lua -O ~/.config/nvim/lua/configs/lspconfig.lua
 
 # INSTALANDO OH-MY-ZSH
 
