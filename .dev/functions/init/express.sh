@@ -41,3 +41,4 @@ const app = express();
 app.use(morgan("dev"));
 
 export default app;' > src/app.js
+echo 'PORT=3000' > .env
