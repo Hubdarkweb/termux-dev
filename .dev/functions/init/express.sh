@@ -15,7 +15,7 @@ echo '{
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "dev": "nodemon src/index.js"
+    "dev": "node --env-file .env --watch src/index.js"
   },
   "keywords": [],
   "author": "",
@@ -24,14 +24,14 @@ echo '{
 
 sed -i "s!backend!${nameProject}!g" package.json
 
-npm install -D nodemon
-npm install express mongoose dotenv cors morgan bcryptjs jsonwebtoken
+#npm install -D nodemon dotenv
+npm install express mongoose cors morgan bcryptjs jsonwebtoken
 
 echo 'import app from "./app.js";
 
 app.listen(3000);
 
-console.log("Server started on port", 3000);' > src/index.js
+console.log("http://localhost:" + 3000);' > src/index.js
 
 echo 'import express from "express";
 import morgan from "morgan";
