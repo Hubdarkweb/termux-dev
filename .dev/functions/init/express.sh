@@ -25,7 +25,7 @@ echo '{
 sed -i "s!backend!${nameProject}!g" package.json
 
 #npm install -D nodemon dotenv
-npm install express mongoose cors morgan bcryptjs jsonwebtoken
+npm install express mongoose cors morgan bcryptjs jsonwebtoken cookie-parser
 
 echo 'import app from "./app.js";
 
