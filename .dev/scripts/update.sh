@@ -23,6 +23,11 @@ if [[ "${checkTypeScript}" == "" ]]; then
   npm install -g typescript
 fi
 
+checkNestJS=$(command -v nest)
+if [[ "${checkNestJS}" == "" ]]; then
+  npm install -g @nestjs/cli
+fi
+
 # DESCARGANDO NUEVOS ARCHIVOS 
 
 cd ${TermuxDev}
