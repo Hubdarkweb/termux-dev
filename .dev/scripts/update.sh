@@ -14,9 +14,13 @@ yes|pkg install mongodb
 # INSTALANDO MODULOS DE NPM 
 
 checkVercel=$(command -v vercel)
-
 if [[ "${checkVercel}" == "" ]]; then
   npm install -g vercel
+fi
+
+checkTypeScript=$(command -v tsc)
+if [[ "${checkTypeScript}" == "" ]]; then
+  npm install -g typescript
 fi
 
 # DESCARGANDO NUEVOS ARCHIVOS 
