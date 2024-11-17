@@ -38,7 +38,7 @@ elif [[ "${argument}" == "deploy" ]]; then
 
   ##### Upload to GitHub #####
 
-  if [[ "${option}" === "github" ]]; then
+  if [[ "${option}" == "github" ]]; then
     source ${devPath}/libs/deploy/github.sh
   else
     echo -e "Invalid option"
