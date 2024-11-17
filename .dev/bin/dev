@@ -1,85 +1,51 @@
 #!/bin/bash
 
-source ~/.termux-dev/env/env.sh
 source ~/.termux-dev/env/config.sh
 
 argument=$1
 option=$2
 
-function option() {
-  echo -e ${red}"Invalid option!"${white}
-}
+##### Help Argument #####
 
 if [[ "${argument}" == "help" ]]; then
-  source ${TermuxDev}/.dev/scripts/help.sh
-elif [[ "${argument}" == "config" ]]; then
-  if [[ "${option}" == "theme" ]]; then
-    source ${TermuxDev}/.dev/functions/config/theme.sh
-  elif [[ ${option} == "banner" ]]; then
-    source ${TermuxDev}/.dev/functions/config/banner.sh
-  elif [[ ${option} == "port" ]]; then
-    source ${TermuxDev}/.dev/functions/config/port.sh
-  else
-    option
-  fi
-elif [[ "${argument}" == "new" ]]; then
-  if [[ "${option}" == "token" ]]; then
-    source ${TermuxDev}/.dev/functions/new/token.sh
-  elif [[ "${option}" == "note" ]]; then
-    source ${TermuxDev}/.dev/functions/new/note.sh
-  elif [[ "${option}" == "project" ]]; then
-    source ${TermuxDev}/.dev/functions/new/project.sh
-  else
-    option
-  fi
-elif [[ "${argument}" == "server" ]]; then
-  if [[ "${option}" == "node" ]]; then
-    source ${TermuxDev}/.dev/functions/server/node.sh
-  elif [[ "${option}" == "php" ]]; then
-    source ${TermuxDev}/.dev/functions/server/php.sh
-  elif [[ "${option}" == "python" ]]; then
-    source ${TermuxDev}/.dev/functions/server/python.sh
-  else
-    option
-  fi
-elif [[ "${argument}" == "show" ]]; then
-  if [[ "${option}" == "tokens" ]]; then
-    source ${TermuxDev}/.dev/functions/show/tokens.sh
-  elif [[ "${option}" == "notes" ]]; then
-    source ${TermuxDev}/.dev/functions/show/notes.sh
-  elif [[ "${option}" == "commands" ]]; then
-    source ${TermuxDev}/.dev/functions/show/commands.sh
-  elif [[ "${option}" == "port" ]]; then
-    source ${TermuxDev}/.dev/functions/show/port.sh
-  else
-    option
-  fi
-elif [[ "${argument}" == "forward" ]]; then
-  if [[ "${option}" == "ngrok" ]]; then
-    source ${TermuxDev}/.dev/functions/forward/ngrok.sh
-  elif [[ "${option}" == "cloudflared" ]]; then
-    source ${TermuxDev}/.dev/functions/forward/cloudflared.sh
-  elif [[ "${option}" == "localtunnel" ]]; then
-    source ${TermuxDev}/.dev/functions/forward/localtunnel.sh
-  else
-    option
-  fi
+
+  ##### Help menu #####
+
+  node ${devPath}/libs/help/help.js
+
+  ##### Init Argument #####
+
 elif [[ "${argument}" == "init" ]]; then
+
+  ##### React Project #####
+
   if [[ "${option}" == "react" ]]; then
-    source ${TermuxDev}/.dev/functions/init/react.sh
+    source ${devPath}/libs/init/react.sh
+
+    ##### Express Project #####
+
   elif [[ "${option}" == "express" ]]; then
-    source ${TermuxDev}/.dev/functions/init/express.sh
+    source ${devPath}/libs/init/express.sh
+
   else
-    option
+    echo -e "Invalid option"
+
   fi
+
+  ##### Deploy Argument #####
+
 elif [[ "${argument}" == "deploy" ]]; then
-  if [[ "${option}" == "github" ]]; then
-    source ${TermuxDev}/.dev/functions/deploy/github.sh
-  elif [[ "${option}" == "vercel" ]]; then
-    source ${TermuxDev}/.dev/functions/deploy/vercel.sh
+
+  ##### Upload to GitHub #####
+
+  if [[ "${option}" === "github" ]]; then
+    source ${devPath}/libs/deploy/github.sh
   else
-    option
+    echo -e "Invalid option"
   fi
+
+  ##### Error messages #####
+
 else
-  source ${TermuxDev}/.dev/scripts/help.sh
+  echo -e "Invalid argument"
 fi

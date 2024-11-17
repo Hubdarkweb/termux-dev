@@ -1,0 +1,7 @@
+typescript
+@nestjs/cli
+prettier
+live-server
+localtunnel
+vercel
+vite
