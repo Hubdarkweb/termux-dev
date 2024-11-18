@@ -27,119 +27,14 @@ Clone the repository.
 git clone https://github.com/TermuxDev/termux-dev.git
 ```
 
-Run the installer.
+Exec the installer.
 ```bash
-cd termux-dev && bash install.sh
+cd termux-dev/ && bash setup.sh
 ```
 
-Continue with the installation.
+Exit of the shell.
 ```bash
-bash next.sh
-```
-
-> Restart your Termux application to view the changes.
-
-<h2>New command (dev)</h2>
-<p align="center">
-<img src="https://github.com/TermuxDev/termux-dev/blob/main/public/dev-command.jpg">
-</p>
-
-<h2>Termux-Dev Themes</h2>
-
-> You can change the default Termux-Dev theme using the command:
-
-```bash
-dev config theme
-```
-
-<p align="center">
-<img src="https://github.com/TermuxDev/termux-dev/blob/main/public/logo-blue.jpg">
-<img src="https://github.com/TermuxDev/termux-dev/blob/main/public/logo-green.jpg">
-<img src="https://github.com/TermuxDev/termux-dev/blob/main/public/logo-cyan.jpg">
-</p>
-
-<h2>Argument (new)</h2>
-
-> You can create projects or save tokens and notes using the (new) argument with its respective options:
-
-```bash
-dev new token
-```
-
-```bash
-dev new note
-```
-
-```bash
-dev new project
-```
-
-<h2>Argument (server)</h2>
-
-> You can start a local server on the default port (8080) using the (server) argument with its respective options:
-
-```bash
-dev server node
-```
-
-```bash
-dev server php
-```
-
-```bash
-dev server python
-```
-
-<h2>Argument (forward)</h2>
-
-> You can expose your local server to the world by using a port forward with the argument (forward) and its respective options.
-
-```bash
-dev forward ngrok
-```
-
-```bash
-dev forward cloudflared
-```
-
-```bash
-dev forward localtunnel
-```
-
-<h2>Argument (config)</h2>
-
-> You can change the default theme, banner and port, using the (config) argument with their respective options:
-
-```bash
-dev config theme
-```
-
-```bash
-dev config banner
-```
-
-```bash
-dev config port
-```
-
-<h2>Argument (show)</h2>
-
-> You can view and list saved commands, tokens, notes, and ports using the (show) argument with their respective options:
-
-```bash
-dev show tokens
-```
-
-```bash
-dev show notes
-```
-
-```bash
-dev show commands
-```
-
-```bash
-dev show port
+exit
 ```
 
 <h2>Argument (init)</h2>
@@ -196,14 +91,6 @@ dev deploy github
 
 ```bash
 termux-dev-update
-```
-
-<h2>Restart Termux-Dev!</h2>
-
-> You can reset the Termux-Dev style by running the command:
-
-```bash
-termux-dev-restart
 ```
 
 <h2>Follow me</h2>
