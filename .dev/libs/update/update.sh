@@ -26,3 +26,7 @@ done < ${TermuxDev}/.dev/txt/node-modules.txt
 
 chmod +x ${TermuxDev}/.dev/bin/*
 cp ${TermuxDev}/.dev/bin/* $PREFIX/bin
+
+# Updating termux-dev repo.
+
+cd ${TermuxDev} && git pull origin main
