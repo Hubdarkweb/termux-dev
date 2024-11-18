@@ -51,6 +51,8 @@ rm -rf ~/.local/share/nvim
 
 mkdir -p ~/.config
 
+git clone https://github.com/NvChad/starter ~/.config/nvim
+
 rm ~/.config/nvim/lua/plugins/init.lua
 rm ~/.config/nvim/lua/configs/lspconfig.lua
 
