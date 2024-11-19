@@ -47,5 +47,5 @@ elif [[ "${argument}" == "deploy" ]]; then
   ##### Error messages #####
 
 else
-  echo -e "Invalid argument"
+  node ${devPath}/libs/help/help.js
 fi
