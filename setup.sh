@@ -85,6 +85,7 @@ if [[ -d ~/.zsh-plugins ]]; then
 # Add alias to zshrc
 
   echo 'alias ls="lsd"' >> ~/.zshrc
+  echo 'echo ""' >> ~/.zshrc
 
 fi
 
