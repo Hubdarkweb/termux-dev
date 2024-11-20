@@ -60,6 +60,10 @@ wget https://raw.githubusercontent.com/TermuxDev/termux-dev-repo/main/install/nv
 
 wget https://raw.githubusercontent.com/TermuxDev/termux-dev-repo/main/install/nvchad/nvim/lua/configs/lspconfig.lua -O ~/.config/nvim/lua/configs/lspconfig.lua
 
+wget https://raw.githubusercontent.com/TermuxDev/termux-dev-repo/main/install/nvchad/nvim/lua/configs/cmp.lua -O ~/.config/nvim/lua/configs/cmp.lua
+
+wget https://raw.githubusercontent.com/TermuxDev/termux-dev-repo/main/install/nvchad/nvim/lua/mappings.lua -O ~/.config/nvim/lua/mappings.lua
+
 # Download oh-my-zsh shell
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" --unattended
