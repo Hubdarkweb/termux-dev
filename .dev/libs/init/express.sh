@@ -32,6 +32,7 @@ sed -i "s!backend!${nameProject}!g" package.json
 # Installing express and backend modules
 
 npm install express mongoose cors morgan bcryptjs jsonwebtoken cookie-parser axios
+npm install cross-env -D #nodemom #dotenv
 
 # Editing default index.js
 
