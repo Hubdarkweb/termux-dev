@@ -84,8 +84,10 @@ if [[ -d ~/.zsh-plugins ]]; then
 
 # Add alias to zshrc
 
+  echo "TermuxDev='${show}'" >> ~/.zshrc
+  echo 'version=$(jq -r .version ${TermuxDev}/package.json)' >> ~/.zshrc
   echo 'alias ls="lsd"' >> ~/.zshrc
-  echo 'echo ""' >> ~/.zshrc
+  echo 'echo "\n\e[0;32m  \e[1;30mTermux-Dev \e[0;32m v${version}\n"' >> ~/.zshrc
 
 fi
 
