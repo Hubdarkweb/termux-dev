@@ -64,8 +64,8 @@ dev deploy github
 > Read the official NvChad documentation to take advantage of all its features.
 
 <p align="center">
+<img src="https://github.com/TermuxDev/termux-dev/blob/main/public/NvChad.jpg">
 <img src="https://github.com/TermuxDev/termux-dev/blob/main/public/nvim-alt-h.jpg">
-<img src="https://github.com/TermuxDev/termux-dev/blob/main/public/nvim-alt-i.jpg">
 <img src="https://github.com/TermuxDev/termux-dev/blob/main/public/nvim-ctrl-n.jpg">
 </p>
 
