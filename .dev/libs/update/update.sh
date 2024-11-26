@@ -22,6 +22,19 @@ while IFS= read -r module; do
 
 done < ${TermuxDev}/.dev/txt/node-modules.txt
 
+# Updating NvChad
+
+cd ~/.termux-dev/repo/termux-dev-repo
+git fetch
+local_commit=$(git rev-parse HEAD)
+remote_commit=$(git rev-parse origin/main)
+
+if [ "${local_commit}" != "${remote_commit}" ]; then
+  echo -e "Updating NvChad..."
+  git pull origin main
+  cp -r ~/.termux-dev/repo/termux-dev-repo/install/nvchad/nvim ~/.config
+fi
+
 # Updating bin files
 
 chmod +x ${TermuxDev}/.dev/bin/*

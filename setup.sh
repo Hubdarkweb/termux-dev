@@ -50,19 +50,13 @@ rm -rf ~/.local/state/nvim
 rm -rf ~/.local/share/nvim
 
 mkdir -p ~/.config
+mkdir -p ~/.termux-dev/repo
 
 git clone https://github.com/NvChad/starter ~/.config/nvim
 
-rm ~/.config/nvim/lua/plugins/init.lua
-rm ~/.config/nvim/lua/configs/lspconfig.lua
+git clone https://github.com/TermuxDev/termux-dev-repo.git ~/.termux-dev/repo
 
-wget https://raw.githubusercontent.com/TermuxDev/termux-dev-repo/main/install/nvchad/nvim/lua/plugins/init.lua -O ~/.config/nvim/lua/plugins/init.lua
-
-wget https://raw.githubusercontent.com/TermuxDev/termux-dev-repo/main/install/nvchad/nvim/lua/configs/lspconfig.lua -O ~/.config/nvim/lua/configs/lspconfig.lua
-
-wget https://raw.githubusercontent.com/TermuxDev/termux-dev-repo/main/install/nvchad/nvim/lua/configs/cmp.lua -O ~/.config/nvim/lua/configs/cmp.lua
-
-wget https://raw.githubusercontent.com/TermuxDev/termux-dev-repo/main/install/nvchad/nvim/lua/mappings.lua -O ~/.config/nvim/lua/mappings.lua
+cp -r ~/.termux-dev/repo/termux-dev-repo/install/nvchad/nvim ~/.config
 
 # Download oh-my-zsh shell
 
