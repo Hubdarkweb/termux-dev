@@ -13,7 +13,11 @@ echo -e "Updating Node Modules..."
 
 while IFS= read -r module; do
 
-  version=$(npm list -g ${module} --depth=0 | grep ${module} | awk -F '@' '{print $2}')
+  if [[ "${module}" == "@nestjs/cli" ]]; then
+    version=$(npm list -g ${module} --depth=0 | grep ${module} | awk -F '@' '{print $3}')
+  else
+    version=$(npm list -g ${module} --depth=0 | grep ${module} | awk -F '@' '{print $2}')
+  fi
 
   if [[ "${version}" != "$(npm show ${module} version)" ]]; then
     echo -e "Updating ${module}..."
