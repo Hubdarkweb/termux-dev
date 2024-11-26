@@ -25,7 +25,7 @@ yes|pkg update && yes|pkg upgrade
 
 # Installing termux packages
 
-yes|pkg install git gh zsh neovim nodejs python php curl wget lua-language-server lsd bat tur-repo proot ncurses-utils ripgrep stylua tmate cloudflared translate-shell html2text jq postgresql mariadb sqlite bc
+yes|pkg install git gh zsh neovim nodejs python php curl wget lua-language-server lsd bat tur-repo proot ncurses-utils ripgrep stylua tmate cloudflared translate-shell html2text jq postgresql mariadb sqlite bc tree
 
 # Installing termux-users repositories
 
@@ -54,7 +54,7 @@ mkdir -p ~/.termux-dev/repo
 
 git clone https://github.com/NvChad/starter ~/.config/nvim
 
-git clone https://github.com/TermuxDev/termux-dev-repo.git ~/.termux-dev/repo
+git clone https://github.com/TermuxDev/termux-dev-repo.git ~/.termux-dev/repo/termux-dev-repo
 
 cp -r ~/.termux-dev/repo/termux-dev-repo/install/nvchad/nvim ~/.config
 
