@@ -18,7 +18,7 @@ echo '{
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "dev": "node --env-file .env --watch src/index.js"
+    "dev": "node --env-file=.env --watch src/index.js"
   },
   "keywords": [],
   "author": "",
@@ -38,9 +38,9 @@ npm install cross-env -D #nodemom #dotenv
 
 echo 'import app from "./app.js";
 
-app.listen(3000);
-
-console.log("[√] >>> http://localhost:" + 3000);' > src/index.js
+app.listen(3000, () => {
+  console.log("[√] >>> http://localhost:" + 3000);
+});' > src/index.js
 
 # Editing default app.js
 
@@ -50,6 +50,7 @@ import morgan from "morgan";
 const app = express();
 
 app.use(morgan("dev"));
+app.use(express.json());
 
 export default app;' > src/app.js
 
