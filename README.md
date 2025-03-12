@@ -24,7 +24,7 @@ yes|pkg install git
 
 Clone the repository.
 ```bash
-git clone https://github.com/TermuxDev/termux-dev.git
+git clone https://github.com/Hubdarkweb/termux-dev.git
 ```
 
 Exec the installer.
