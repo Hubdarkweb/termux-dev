@@ -54,7 +54,7 @@ mkdir -p ~/.termux-dev/repo
 
 git clone https://github.com/NvChad/starter ~/.config/nvim
 
-git clone https://github.com/Hubdarkweb/termux-dev-repo.git ~/.termux-dev/repo/termux-dev-repo
+git clone https://github.com/Hubdarkweb/termux-dev.git ~/.termux-dev/repo/termux-dev-repo
 
 cp -r ~/.termux-dev/repo/termux-dev-repo/install/nvchad/nvim ~/.config
 
